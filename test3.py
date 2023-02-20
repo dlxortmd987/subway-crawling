@@ -3,11 +3,12 @@ import re
 import time
 
 import pandas as pd
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-
-from bs4 import BeautifulSoup
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 LAST_SUBWAY_RADIO_BUTTON_XPATH = '//*[@id="container"]/shrinkable-layout/div/subway-layout/subway-home-layout/div[1]/div/subway-directions-list/subway-directions-options/div/ul/li[2]/label'
 
@@ -34,7 +35,7 @@ STATION_INPUT_DELAY = 1
 DIRECTION_SEC = 0.5
 
 
-def convert_to_minute(required_time_str): # 예: 2시간 4분
+def convert_to_minute(required_time_str):  # 예: 2시간 4분
     if "시간" in required_time_str:
         temp = required_time_str.strip("분").split("시간")
         temp[1] = temp[1].strip()
@@ -83,7 +84,7 @@ def set_end_station(end_station, chrome_driver):
     chrome_driver.find_element(By.ID, 'input_search_1').send_keys(end_station)
     time.sleep(STATION_INPUT_DELAY)
     chrome_driver.find_element(By.XPATH, END_STATION_BUTTON_XPATH).send_keys(Keys.ENTER)
-    time.sleep(2)
+    time.sleep(1.5)
 
 
 def get_soup(chrome_driver):
@@ -94,8 +95,6 @@ def get_soup(chrome_driver):
 
 def get_required_time(beautiful_soup):
     required_time_str = beautiful_soup.select_one(REQUIRED_TIME_SELECTOR).text
-    # print(required_time_str)
-    # required_time_str = required_time_str.split("시간")
     return convert_to_minute(required_time_str)
 
 
@@ -105,16 +104,7 @@ def get_stations(beautiful_soup):
 
 
 def getDataset():
-    return pd.read_csv(filepath_or_buffer="taek.csv", encoding="cp949", sep=",")
-
-
-driver = webdriver.Chrome()
-driver.get('https://map.naver.com/v5/subway/1000/-/-/-?c=16,0,0,0,dh')
-time.sleep(1)
-
-assert '지하철 - 네이버 지도' in driver.title
-
-dataset = getDataset()
+    return pd.read_csv(filepath_or_buffer="taek.csv", encoding="cp949", sep=",", skiprows=2000)
 
 
 def clear(driver):
@@ -148,6 +138,38 @@ def append_data(path_arr, required_time):
 
 flag = True
 
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+options.add_argument('window-size=1920x1080')
+options.add_argument("disable-gpu")
+options.add_argument('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36')
+options.add_argument("lang=ko_KR")
+driver = webdriver.Chrome('chromedriver', options=options)
+driver.get('https://map.naver.com/v5/subway/1000/-/-/-?c=16,0,0,0,dh')
+
+dataset = getDataset()
+
+
+def run():
+    try:
+        set_start_station(start, driver)
+        set_end_station(end, driver)
+
+        set_first_subway(driver)
+
+        soup = get_soup(driver)
+
+        required_time = get_required_time(soup)
+        path_arr = get_stations(soup)
+
+        clear(driver)
+
+        append_data(path_arr, required_time)
+    except:
+        time.sleep(2)
+        run()
+
+
 for row in dataset.itertuples():
 
     start = row[1]
@@ -164,23 +186,8 @@ for row in dataset.itertuples():
             if start not in last_row[0] or end not in last_row[1]:
                 continue
             else:
+                print('for state end')
                 flag = False
                 continue
 
-    set_start_station(start, driver)
-    set_end_station(end, driver)
-    set_first_subway(driver)
-
-    soup = get_soup(driver)
-    required_time = get_required_time(soup)
-    path_arr = get_stations(soup)
-
-    # print(required_time)
-    # for path in path_arr:
-    #     print(path)
-
-    clear(driver)
-
-    time.sleep(1)
-
-    append_data(path_arr, required_time)
+    run()
