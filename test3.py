@@ -146,6 +146,9 @@ for row in dataset.itertuples():
     start = row[1]
     end = row[2]
 
+    csv = pd.read_csv(filepath_or_buffer="result.csv", encoding="utf-8", sep=",")
+
+
     set_start_station(start, driver)
     set_end_station(end, driver)
     set_first_subway(driver)
