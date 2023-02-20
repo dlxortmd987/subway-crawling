@@ -140,6 +140,7 @@ def append_data(path_arr, required_time):
     else:
         df.to_csv('result.csv', index=False, mode='a', encoding='utf-8', header=False)
 
+flag = True
 
 for row in dataset.itertuples():
 
@@ -148,6 +149,13 @@ for row in dataset.itertuples():
 
     csv = pd.read_csv(filepath_or_buffer="result.csv", encoding="utf-8", sep=",")
 
+    if len(csv) != 0 and flag:
+        last_row = csv.iloc[-1]
+        print(last_row)
+        if not (start in last_row[0] and end in last_row[1]):
+            continue
+        else:
+            flag = False
 
     set_start_station(start, driver)
     set_end_station(end, driver)
