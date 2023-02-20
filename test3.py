@@ -149,6 +149,9 @@ for row in dataset.itertuples():
     start = row[1]
     end = row[2]
 
+    if start in end:
+        continue
+
     if os.path.exists('result.csv'):
         csv = pd.read_csv(filepath_or_buffer="result.csv", encoding="utf-8", sep=",")
 
