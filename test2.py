@@ -1,3 +1,4 @@
+import re
 import time
 
 from selenium import webdriver
@@ -58,7 +59,7 @@ print("소요 시간 ", required_time)
 #
 # print(route_page)
 
-find_all = soup.find_all('li', class_='item_line ng-star-inserted')
+find_all = soup.find_all('li', string=re.compile('역'))
 
 for find in find_all:
     print(find.text)
