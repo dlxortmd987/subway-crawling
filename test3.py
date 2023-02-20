@@ -34,10 +34,14 @@ STATION_INPUT_DELAY = 1
 DIRECTION_SEC = 0.5
 
 
-def convert_to_minute(required_time_str):  # 예: 2시간 4분
+def convert_to_minute(required_time_str): # 예: 2시간 4분
     if "시간" in required_time_str:
         temp = required_time_str.strip("분").split("시간")
-        return int(temp[0]) * 60 + int(temp[1])
+        temp[1] = temp[1].strip()
+        if temp[1].isdigit():
+            return int(temp[0]) * 60 + int(temp[1])
+        else:
+            return int(temp[0]) * 60
     return int(required_time_str.strip("분"))
 
 
