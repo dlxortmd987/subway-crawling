@@ -1,3 +1,4 @@
+import os
 import re
 import time
 
@@ -127,9 +128,17 @@ def append_data(path_arr, required_time):
     end1 = path_arr[0]
     end2 = path_arr[-1]
     route = '-'.join(path_arr)
-    data = [end1, end2, required_time, route]
+    data = {
+        "end1": [end1],
+        "end2": [end2],
+        "required_time": [required_time],
+        "route": [route]
+    }
     df = pd.DataFrame(data)
-    df.to_csv('result.csv', columns=['end1', 'end2', 'required_time', 'route'], mode='a', index=False)
+    if not os.path.exists('result.csv'):
+        df.to_csv('result.csv', index=False, mode='w', encoding='utf-8')
+    else:
+        df.to_csv('result.csv', index=False, mode='a', encoding='utf-8', header=False)
 
 
 for row in dataset.itertuples():
