@@ -90,7 +90,7 @@ def get_soup(chrome_driver):
 
 def get_required_time(beautiful_soup):
     required_time_str = beautiful_soup.select_one(REQUIRED_TIME_SELECTOR).text
-    print(required_time_str)
+    # print(required_time_str)
     # required_time_str = required_time_str.split("시간")
     return convert_to_minute(required_time_str)
 
@@ -135,10 +135,12 @@ def append_data(path_arr, required_time):
         "route": [route]
     }
     df = pd.DataFrame(data)
+    print(df)
     if not os.path.exists('result.csv'):
         df.to_csv('result.csv', index=False, mode='w', encoding='utf-8')
     else:
         df.to_csv('result.csv', index=False, mode='a', encoding='utf-8', header=False)
+
 
 flag = True
 
@@ -147,15 +149,16 @@ for row in dataset.itertuples():
     start = row[1]
     end = row[2]
 
-    csv = pd.read_csv(filepath_or_buffer="result.csv", encoding="utf-8", sep=",")
+    if os.path.exists('result.csv'):
+        csv = pd.read_csv(filepath_or_buffer="result.csv", encoding="utf-8", sep=",")
 
-    if len(csv) != 0 and flag:
-        last_row = csv.iloc[-1]
-        print(last_row)
-        if not (start in last_row[0] and end in last_row[1]):
-            continue
-        else:
-            flag = False
+        if len(csv) != 0 and flag:
+            last_row = csv.iloc[-1]
+            if start not in last_row[0] or end not in last_row[1]:
+                continue
+            else:
+                flag = False
+                continue
 
     set_start_station(start, driver)
     set_end_station(end, driver)
@@ -165,9 +168,9 @@ for row in dataset.itertuples():
     required_time = get_required_time(soup)
     path_arr = get_stations(soup)
 
-    print(required_time)
-    for path in path_arr:
-        print(path)
+    # print(required_time)
+    # for path in path_arr:
+    #     print(path)
 
     clear(driver)
 
