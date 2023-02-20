@@ -6,7 +6,7 @@ csv = pd.read_csv(filepath_or_buffer="서울교통공사 노선별 지하철역 
 
 station_set = set(csv['전철역명'])
 
-dataset = list(set(combinations(station_set, 2)))
+dataset = list(combinations(station_set, 2))
 
 n = len(dataset) // 3
 
