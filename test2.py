@@ -53,7 +53,12 @@ soup = BeautifulSoup(source, 'html.parser')
 required_time = soup.select_one(REQUIRED_TIME_SELECTOR).text.strip('분')
 print("소요 시간 ", required_time)
 
-route = soup.select_one(ROUTE_SELECTOR)
-route_page = route.prettify()
+# route = soup.select_one(ROUTE_SELECTOR)
+# route_page = route.prettify()
+#
+# print(route_page)
 
-print(route_page)
+find_all = soup.find_all('li', class_='item_line ng-star-inserted')
+
+for find in find_all:
+    print(find.text)
