@@ -8,6 +8,10 @@ from selenium.webdriver.common.keys import Keys
 
 from bs4 import BeautifulSoup
 
+LAST_SUBWAY_RADIO_BUTTON_XPATH = '//*[@id="container"]/shrinkable-layout/div/subway-layout/subway-home-layout/div[1]/div/subway-directions-list/subway-directions-options/div/ul/li[2]/label'
+
+FIRST_SUBWAY_RADIO_BUTTON_XPATH = '//*[@id="container"]/shrinkable-layout/div/subway-layout/subway-home-layout/div[1]/div/subway-directions-list/subway-directions-options/div/ul/li[1]/label'
+
 STATIONS_SELECTOR = '#container > shrinkable-layout > div > subway-layout > subway-home-layout > div.sub > subway-directions-details > div > div > ul > li.item_route.type_subway1.ng-star-inserted > ul > li:nth-child'
 
 DETAIL_VIEW_XPATH = '//*[@id="container"]/shrinkable-layout/div/subway-layout/subway-home-layout/div[1]/div/subway-directions-list/div/div[1]/div[2]/button'
@@ -107,6 +111,27 @@ assert '지하철 - 네이버 지도' in driver.title
 
 dataset = getDataset()
 
+
+def clear(driver):
+    driver.find_element(By.ID, 'input_search_0').clear()
+    driver.find_element(By.ID, 'input_search_1').clear()
+
+
+def set_first_subway(driver):
+    driver.find_element(By.XPATH, LAST_SUBWAY_RADIO_BUTTON_XPATH).click()
+    driver.find_element(By.XPATH, FIRST_SUBWAY_RADIO_BUTTON_XPATH).click()
+    time.sleep(1)
+
+
+def append_data(path_arr, required_time):
+    end1 = path_arr[0]
+    end2 = path_arr[-1]
+    route = '-'.join(path_arr)
+    data = [end1, end2, required_time, route]
+    df = pd.DataFrame(data)
+    df.to_csv('result.csv', columns=['end1', 'end2', 'required_time', 'route'], mode='a', index=False)
+
+
 for row in dataset.itertuples():
 
     start = row[1]
@@ -114,6 +139,7 @@ for row in dataset.itertuples():
 
     set_start_station(start, driver)
     set_end_station(end, driver)
+    set_first_subway(driver)
 
     soup = get_soup(driver)
     required_time = get_required_time(soup)
@@ -123,5 +149,8 @@ for row in dataset.itertuples():
     for path in path_arr:
         print(path)
 
+    clear(driver)
 
+    time.sleep(1)
 
+    append_data(path_arr, required_time)

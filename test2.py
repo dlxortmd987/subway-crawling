@@ -33,9 +33,10 @@ def test(start, end):
 
 def run():
     dataset = getDateset()
-    dataset = dataset[1]
-    for row in dataset.itertuples():
-        test(row[0], row[1])
+    print(len(dataset))
+    # dataset = dataset[1]
+    # for row in dataset.itertuples():
+    #     test(row[0], row[1])
 
 
 run()
