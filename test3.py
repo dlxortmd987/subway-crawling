@@ -1,10 +1,12 @@
 import os
 import re
 import time
+from typing import Union
 
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.common import WebDriverException, NoSuchElementException, ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
@@ -52,6 +54,8 @@ def calc_stations(array):
 
     for element in array:
         text = element.text.strip()
+
+        text = text.replace("이수", "총신대입구")
 
         if start in text:
             count += 1
@@ -104,7 +108,7 @@ def get_stations(beautiful_soup):
 
 
 def getDataset():
-    return pd.read_csv(filepath_or_buffer="taek.csv", encoding="cp949", sep=",", skiprows=2000)
+    return pd.read_csv(filepath_or_buffer="taek.csv", encoding="cp949", sep=",", skiprows=9000)
 
 
 def clear(driver):
@@ -138,20 +142,42 @@ def append_data(path_arr, required_time):
 
 flag = True
 
-options = webdriver.ChromeOptions()
-options.add_argument('headless')
-options.add_argument('window-size=1920x1080')
-options.add_argument("disable-gpu")
-options.add_argument('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36')
-options.add_argument("lang=ko_KR")
-driver = webdriver.Chrome('chromedriver', options=options)
-driver.get('https://map.naver.com/v5/subway/1000/-/-/-?c=16,0,0,0,dh')
-
 dataset = getDataset()
 
 
 def run():
-    try:
+    global start, end, flag
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    options.add_argument('window-size=1920x1080')
+    options.add_argument("disable-gpu")
+    options.add_argument(
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36')
+    options.add_argument("lang=ko_KR")
+    driver = webdriver.Chrome('chromedriver', options=options)
+    # driver = webdriver.Chrome()
+    driver.get('https://map.naver.com/v5/subway/1000/-/-/-?c=16,0,0,0,dh')
+    for row in dataset.itertuples():
+
+        start = row[1]
+        end = row[2]
+
+        if start in end:
+            continue
+        print(row)
+
+        if os.path.exists('result.csv'):
+            csv = pd.read_csv(filepath_or_buffer="result.csv", encoding="utf-8", sep=",")
+
+            if len(csv) != 0 and flag:
+                last_row = csv.iloc[-1]
+                if start not in last_row[0] or end not in last_row[1]:
+                    continue
+                else:
+                    print('for state end')
+                    flag = False
+                    continue
+
         set_start_station(start, driver)
         set_end_station(end, driver)
 
@@ -165,29 +191,6 @@ def run():
         clear(driver)
 
         append_data(path_arr, required_time)
-    except:
-        time.sleep(2)
-        run()
 
 
-for row in dataset.itertuples():
-
-    start = row[1]
-    end = row[2]
-
-    if start in end:
-        continue
-
-    if os.path.exists('result.csv'):
-        csv = pd.read_csv(filepath_or_buffer="result.csv", encoding="utf-8", sep=",")
-
-        if len(csv) != 0 and flag:
-            last_row = csv.iloc[-1]
-            if start not in last_row[0] or end not in last_row[1]:
-                continue
-            else:
-                print('for state end')
-                flag = False
-                continue
-
-    run()
+run()

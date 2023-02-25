@@ -1,14 +1,27 @@
+import json
 from itertools import combinations
 
 import pandas as pd
 
-csv = pd.read_csv(filepath_or_buffer="서울교통공사 노선별 지하철역 정보.csv", encoding="cp949", sep=",")
+with open("station_id.json", "r", encoding="utf-8") as f:
+    contents = f.read()
+    json_data = json.loads(contents)
 
-station_set = set(csv['전철역명'])
+stations = []
 
-dataset = list(combinations(station_set, 2))
+for station in json_data:
+    stations.append(station['id'])
+print(stations)
 
-n = len(dataset) // 3
+dataset = list(combinations(stations, 2))
+
+final = []
+
+for data in dataset:
+    if data[0] != data[1]:
+        final.append(data)
+
+n = len(final) // 3
 
 taek_dataset = dataset[:n]
 hwan_dataset = dataset[n+1:2*n]
@@ -18,6 +31,6 @@ taek_dataFrame = pd.DataFrame(taek_dataset)
 hwan_dataFrame = pd.DataFrame(hwan_dataset)
 sun_dataFrame = pd.DataFrame(sun_dataset)
 
-taek_dataFrame.to_csv('taek.csv', encoding='cp949', index=False)
-hwan_dataFrame.to_csv('hwan.csv', encoding='cp949', index=False)
-sun_dataFrame.to_csv('sun.csv', encoding='cp949', index=False)
+taek_dataFrame.to_csv('taek.csv', encoding='utf-8', index=False)
+hwan_dataFrame.to_csv('hwan.csv', encoding='utf-8', index=False)
+sun_dataFrame.to_csv('sun.csv', encoding='utf-8', index=False)
