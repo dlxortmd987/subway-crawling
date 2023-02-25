@@ -7,6 +7,7 @@ import pandas as pd
 import requests
 
 
+
 csv = pd.read_csv(filepath_or_buffer="taek.csv", encoding="utf-8", sep=",")
 
 
@@ -72,7 +73,7 @@ for idx, t in enumerate(tuples):
     }
     df = pd.DataFrame(data)
     r_df = pd.DataFrame(r_data)
-    if not os.path.exists('result.csv'):
+    if not os.path.exists('result2.csv'):
         df.to_csv('result2.csv', index=False, mode='w', encoding='utf-8')
         r_df.to_csv('result2.csv', index=False, mode='a', encoding='utf-8', header=False)
     else:
