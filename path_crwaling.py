@@ -6,9 +6,11 @@ from random import uniform
 import pandas as pd
 import requests
 
+SKIP_ROWS = 19000
 
 
-csv = pd.read_csv(filepath_or_buffer="taek.csv", encoding="utf-8", sep=",")
+
+csv = pd.read_csv(filepath_or_buffer="taek.csv", encoding="utf-8", sep=",", skiprows=SKIP_ROWS)
 
 
 tuples = csv.itertuples()
@@ -26,7 +28,7 @@ for idx, t in enumerate(tuples):
         saved_length = len(result)
         print(start, ', ', goal)
 
-        if saved_length != 0 and idx + 1 < saved_length:
+        if saved_length != 0 and idx + 1 + SKIP_ROWS < saved_length:
             continue
 
     params = {
