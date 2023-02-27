@@ -6,9 +6,7 @@ from random import uniform
 import pandas as pd
 import requests
 
-SKIP_ROWS = 19000
-
-
+SKIP_ROWS = 0
 
 csv = pd.read_csv(filepath_or_buffer="taek.csv", encoding="utf-8", sep=",", skiprows=SKIP_ROWS)
 
@@ -23,8 +21,8 @@ for idx, t in enumerate(tuples):
     if start == goal:
         continue
 
-    if os.path.exists('result2.csv'):
-        result = pd.read_csv(filepath_or_buffer="result2.csv", encoding="utf-8", sep=",")
+    if os.path.exists('path.csv'):
+        result = pd.read_csv(filepath_or_buffer="path.csv", encoding="utf-8", sep=",")
         saved_length = len(result)
         print(start, ', ', goal)
 
@@ -75,12 +73,12 @@ for idx, t in enumerate(tuples):
     }
     df = pd.DataFrame(data)
     r_df = pd.DataFrame(r_data)
-    if not os.path.exists('result2.csv'):
-        df.to_csv('result2.csv', index=False, mode='w', encoding='utf-8')
-        r_df.to_csv('result2.csv', index=False, mode='a', encoding='utf-8', header=False)
+    if not os.path.exists('path.csv'):
+        df.to_csv('path.csv', index=False, mode='w', encoding='utf-8', header=False)
+        r_df.to_csv('r_path.csv', index=False, mode='a', encoding='utf-8', header=False)
     else:
-        df.to_csv('result2.csv', index=False, mode='a', encoding='utf-8', header=False)
-        r_df.to_csv('result2.csv', index=False, mode='a', encoding='utf-8', header=False)
+        df.to_csv('path.csv', index=False, mode='a', encoding='utf-8', header=False)
+        r_df.to_csv('r_path.csv', index=False, mode='a', encoding='utf-8', header=False)
     print(df)
 
     rand_value = uniform(1, 2)
