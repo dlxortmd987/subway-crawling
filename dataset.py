@@ -8,6 +8,7 @@ with open("station_id.json", "r", encoding="utf-8") as f:
     json_data = json.loads(contents)
 
 stations = []
+undefined_stations = []
 
 for station in json_data:
     stations.append(station['id'])

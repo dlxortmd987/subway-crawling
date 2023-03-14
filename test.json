@@ -1,1402 +1,228 @@
 {
-  "status": "CITY",
-  "context": {
-    "engineVersion": "1.5.0:ee579653-7b61-4ab5-b289-d8595a255817",
-    "engineUrl": None,
-    "start": None,
-    "goal": None,
-    "departureTime": "2023-02-24T01:06:51",
-    "currentDateTime": "2023-02-24T01:07:29",
-    "serviceDay": {
-      "id": 1,
-      "name": "∆Ú¿œ"
-    },
-    "recommendDirectionsType": "CITY",
-    "uuid": None
-  },
-  "paths": [
-    {
-      "idx": 1,
-      "mode": "TIME",
-      "type": "SUBWAY",
-      "optimizationMethod": "MINIMUM_DURATION",
-      "labels": [
-        "√÷¿˚"
-      ],
-      "departureTime": "2023-02-24T05:49:00",
-      "arrivalTime": "2023-02-24T05:57:10",
-      "alarmDepartureTime": "2023-02-24T05:49:00",
-      "alarmArrivalTime": "2023-02-24T05:57:10",
-      "duration": 8,
-      "intercityDuration": 0,
-      "walkingDuration": 0,
-      "waitingDuration": 0,
-      "distance": 5000,
-      "shutdown": True,
-      "fare": 1250,
-      "fares": [
-        {
-          "routes": [
-            [
-              {
-                "id": 7,
-                "name": "7»£º±",
-                "longName": "ºˆµµ±« 7»£º±(¿Âæœ-ºÆ≥≤)",
-                "type": {
-                  "id": 7,
-                  "name": "7»£º±",
-                  "shortName": None,
-                  "longName": None,
-                  "iconName": None,
-                  "color": "",#697215"",
-                  "darkColor": None
-                },
-                "realtime": False,
-                "useInterval": False,
-                "operationType": "¿œπ›",
-                "operation": {
-                  "type": "NORMAL",
-                  "name": "¿œπ›",
-                  "shortName": "¿œ"
-                },
-                "color": None,
-                "platform": None,
-                "headsign": None,
-                "busInterval": None,
-                "extra": None,
-                "exType": None,
-                "flag": None,
-                "canReserve": False
-              }
-            ]
-          ],
-          "fare": 1250,
-          "tripIdx": 3521
-        }
-      ],
-      "legs": [
-        {
-          "steps": [
-            {
-              "type": "SUBWAY",
-              "instruction": "¡ˆ«œ√∂ Ω¬¬˜",
-              "info": {
-                "walk": None,
-                "etc": "¡ˆ«œ√∂ Ω¬¬˜",
-                "subway": None
-              },
-              "departureTime": "2023-02-24T05:49:00",
-              "arrivalTime": "2023-02-24T05:57:10",
-              "alarmTime": {
-                "alarmDepartureTime": "2023-02-24T05:49:00",
-                "alarmArrivalTime": "2023-02-24T05:57:10"
-              },
-              "distance": 5000,
-              "duration": 8,
-              "tripIdx": 3521,
-              "headsign": "¿Âæœ",
-              "realtimeAvailable": "Y",
-              "wayType": "UP",
-              "routes": [
-                {
-                  "id": 7,
-                  "name": "7»£º±",
-                  "longName": "ºˆµµ±« 7»£º±(¿Âæœ-ºÆ≥≤)",
-                  "type": {
-                    "id": 7,
-                    "name": "7»£º±",
-                    "shortName": "7»£º±",
-                    "longName": None,
-                    "iconName": "7",
-                    "color": "",#697215"",
-                    "darkColor": None
-                  },
-                  "realtime": False,
-                  "useInterval": False,
-                  "operationType": "¿œπ›",
-                  "operation": {
-                    "type": "NORMAL",
-                    "name": "¿œπ›",
-                    "shortName": "¿œ"
-                  },
-                  "color": None,
-                  "platform": {
-                    "status": "EXIST",
-                    "type": {
-                      "code": "EXIT",
-                      "desc": "∫¸∏•«œ¬˜"
-                    },
-                    "door": "2-4",
-                    "doors": [
-                      "2-4",
-                      "6-2",
-                      "6-3"
-                    ]
-                  },
-                  "headsign": "¿Âæœ",
-                  "busInterval": None,
-                  "extra": None,
-                  "exType": None,
-                  "flag": None,
-                  "canReserve": False
-                }
-              ],
-              "stations": [
-                {
-                  "id": 736,
-                  "placeId": "13479774",
-                  "name": "¿Ãºˆ",
-                  "longName": None,
-                  "displayName"": "¿Ãºˆø™"",
-                  "displayCode": "736",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 3,
-                      "name": "»ØΩ¬ø¨∞·"
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 1,
-                      "name": "æ»¬ "
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥",
-                      "π∞«∞∫∏∞¸"
-                    ],
-                    "disabledFacilities": [
-                      "ºˆ¿ØΩ«",
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ",
-                      "»Ÿ√ºæÓ ∏Æ«¡∆Æ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                },
-                {
-                  "id": 735,
-                  "placeId": "13479552",
-                  "name": "≥ªπÊ",
-                  "longName": None,
-                  "displayName": "≥ªπÊø™",
-                  "displayCode": "735",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 2,
-                      "name": "ø¨∞·µ "
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 2,
-                      "name": "πŸ±˘"
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥",
-                      "π∞«∞∫∏∞¸"
-                    ],
-                    "disabledFacilities": [
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                },
-                {
-                  "id": 734,
-                  "placeId": "20536607",
-                  "name": "∞Ìº”≈ÕπÃ≥Œ",
-                  "longName": None,
-                  "displayName": "∞Ìº”≈ÕπÃ≥Œø™",
-                  "displayCode": "734",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 3,
-                      "name": "»ØΩ¬ø¨∞·"
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 2,
-                      "name": "πŸ±˘"
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥",
-                      "π∞«∞∫∏∞¸"
-                    ],
-                    "disabledFacilities": [
-                      "ºˆ¿ØΩ«",
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ",
-                      "»Ÿ√ºæÓ ∏Æ«¡∆Æ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                },
-                {
-                  "id": 733,
-                  "placeId": "13479551",
-                  "name": "π›∆˜",
-                  "longName": None,
-                  "displayName": "π›∆˜ø™",
-                  "displayCode": "733",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 2,
-                      "name": "ø¨∞·µ "
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 2,
-                      "name": "πŸ±˘"
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥"
-                    ],
-                    "disabledFacilities": [
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ",
-                      "»Ÿ√ºæÓ ∏Æ«¡∆Æ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                },
-                {
-                  "id": 732,
-                  "placeId": "13479550",
-                  "name": "≥Ì«ˆ",
-                  "longName": None,
-                  "displayName": "≥Ì«ˆø™",
-                  "displayCode": "732",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 2,
-                      "name": "ø¨∞·µ "
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 2,
-                      "name": "πŸ±˘"
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥",
-                      "π∞«∞∫∏∞¸"
-                    ],
-                    "disabledFacilities": [
-                      "ºˆ¿ØΩ«",
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ",
-                      "»Ÿ√ºæÓ ∏Æ«¡∆Æ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                }
-              ],
-              "arrivals": [],
-              "points": [
-                {
-                  "x": 126.9820633,
-                  "y": 37.4853821
-                },
-                {
-                  "x": 126.9820633,
-                  "y": 37.4853821
-                },
-                {
-                  "x": 126.9824524,
-                  "y": 37.4854507
-                },
-                {
-                  "x": 126.983139,
-                  "y": 37.4855194
-                },
-                {
-                  "x": 126.9860382,
-                  "y": 37.4858513
-                },
-                {
-                  "x": 126.9880295,
-                  "y": 37.4860725
-                },
-                {
-                  "x": 126.9883728,
-                  "y": 37.4861221
-                },
-                {
-                  "x": 126.9889984,
-                  "y": 37.4862442
-                },
-                {
-                  "x": 126.9892883,
-                  "y": 37.4863205
-                },
-                {
-                  "x": 126.9908218,
-                  "y": 37.4867935
-                },
-                {
-                  "x": 126.9923325,
-                  "y": 37.4872551
-                },
-                {
-                  "x": 126.9929123,
-                  "y": 37.487442
-                },
-                {
-                  "x": 126.9934998,
-                  "y": 37.4876251
-                },
-                {
-                  "x": 126.9934998,
-                  "y": 37.4876251
-                },
-                {
-                  "x": 126.9939651,
-                  "y": 37.4877663
-                },
-                {
-                  "x": 126.9944229,
-                  "y": 37.4879036
-                },
-                {
-                  "x": 126.9959412,
-                  "y": 37.4883766
-                },
-                {
-                  "x": 126.9964752,
-                  "y": 37.4885445
-                },
-                {
-                  "x": 126.9972382,
-                  "y": 37.4888382
-                },
-                {
-                  "x": 126.9978409,
-                  "y": 37.4892197
-                },
-                {
-                  "x": 126.9983368,
-                  "y": 37.4896584
-                },
-                {
-                  "x": 126.9986954,
-                  "y": 37.4900742
-                },
-                {
-                  "x": 126.99897,
-                  "y": 37.4904671
-                },
-                {
-                  "x": 126.9993668,
-                  "y": 37.491127
-                },
-                {
-                  "x": 126.9998474,
-                  "y": 37.4919128
-                },
-                {
-                  "x": 127.0,
-                  "y": 37.4921761
-                },
-                {
-                  "x": 127.0000992,
-                  "y": 37.4923325
-                },
-                {
-                  "x": 127.0005875,
-                  "y": 37.4930458
-                },
-                {
-                  "x": 127.0009308,
-                  "y": 37.4935455
-                },
-                {
-                  "x": 127.0014725,
-                  "y": 37.4944153
-                },
-                {
-                  "x": 127.0017242,
-                  "y": 37.4950562
-                },
-                {
-                  "x": 127.0018997,
-                  "y": 37.4954834
-                },
-                {
-                  "x": 127.0019913,
-                  "y": 37.4960938
-                },
-                {
-                  "x": 127.0020828,
-                  "y": 37.4970169
-                },
-                {
-                  "x": 127.0021744,
-                  "y": 37.4980507
-                },
-                {
-                  "x": 127.0022812,
-                  "y": 37.4992409
-                },
-                {
-                  "x": 127.0024109,
-                  "y": 37.5006142
-                },
-                {
-                  "x": 127.0025177,
-                  "y": 37.5011902
-                },
-                {
-                  "x": 127.0027542,
-                  "y": 37.5017891
-                },
-                {
-                  "x": 127.0028915,
-                  "y": 37.5020065
-                },
-                {
-                  "x": 127.0030518,
-                  "y": 37.5022964
-                },
-                {
-                  "x": 127.0032654,
-                  "y": 37.5025139
-                },
-                {
-                  "x": 127.0035324,
-                  "y": 37.5027847
-                },
-                {
-                  "x": 127.0036926,
-                  "y": 37.5029221
-                },
-                {
-                  "x": 127.0040359,
-                  "y": 37.5031967
-                },
-                {
-                  "x": 127.0043869,
-                  "y": 37.5034065
-                },
-                {
-                  "x": 127.0045166,
-                  "y": 37.5034714
-                },
-                {
-                  "x": 127.0045166,
-                  "y": 37.5034714
-                },
-                {
-                  "x": 127.004631,
-                  "y": 37.5035248
-                },
-                {
-                  "x": 127.0047531,
-                  "y": 37.5035782
-                },
-                {
-                  "x": 127.0051498,
-                  "y": 37.5037346
-                },
-                {
-                  "x": 127.0055923,
-                  "y": 37.5038834
-                },
-                {
-                  "x": 127.0065536,
-                  "y": 37.504261
-                },
-                {
-                  "x": 127.0069733,
-                  "y": 37.5044441
-                },
-                {
-                  "x": 127.0071716,
-                  "y": 37.5045624
-                },
-                {
-                  "x": 127.0073624,
-                  "y": 37.504673
-                },
-                {
-                  "x": 127.0076141,
-                  "y": 37.504837
-                },
-                {
-                  "x": 127.0078888,
-                  "y": 37.505085
-                },
-                {
-                  "x": 127.0081329,
-                  "y": 37.5053482
-                },
-                {
-                  "x": 127.0086594,
-                  "y": 37.5061073
-                },
-                {
-                  "x": 127.0091095,
-                  "y": 37.5067711
-                },
-                {
-                  "x": 127.0093384,
-                  "y": 37.5070419
-                },
-                {
-                  "x": 127.0095673,
-                  "y": 37.5072708
-                },
-                {
-                  "x": 127.0098419,
-                  "y": 37.5074806
-                },
-                {
-                  "x": 127.0101166,
-                  "y": 37.5076714
-                },
-                {
-                  "x": 127.0104218,
-                  "y": 37.5078278
-                },
-                {
-                  "x": 127.0107803,
-                  "y": 37.5079384
-                },
-                {
-                  "x": 127.0110779,
-                  "y": 37.5080223
-                },
-                {
-                  "x": 127.0117416,
-                  "y": 37.5082245
-                },
-                {
-                  "x": 127.0117416,
-                  "y": 37.5082245
-                },
-                {
-                  "x": 127.0123138,
-                  "y": 37.5083923
-                },
-                {
-                  "x": 127.0129013,
-                  "y": 37.5085602
-                },
-                {
-                  "x": 127.014183,
-                  "y": 37.5089378
-                },
-                {
-                  "x": 127.0152664,
-                  "y": 37.5092621
-                },
-                {
-                  "x": 127.0165405,
-                  "y": 37.5096512
-                },
-                {
-                  "x": 127.0189743,
-                  "y": 37.5104027
-                },
-                {
-                  "x": 127.0202789,
-                  "y": 37.5108109
-                },
-                {
-                  "x": 127.020813,
-                  "y": 37.5109673
-                },
-                {
-                  "x": 127.0213547,
-                  "y": 37.5111351
-                }
-              ],
-              "direction": 1,
-              "walkpath": None,
-              "shutdown": False,
-              "lastTrip": False,
-              "firstTrip": True,
-              "departureCity": None,
-              "stationIdAsOptional": None
-            }
-          ]
-        }
-      ],
-      "transferCount": 0,
-      "directionsType": "CITY",
-      "pathLabels": [
-        {
-          "labelCode": "BEST",
-          "labelText": "√÷¿˚"
-        }
-      ],
-      "vehicleTypes": [
-        "SUBWAY"
-      ]
-    },
-    {
-      "idx": 1,
-      "mode": "TIME",
-      "type": "SUBWAY",
-      "optimizationMethod": "MINIMUM_TRANSFER",
-      "labels": [
-        "√÷¿˚"
-      ],
-      "departureTime": "2023-02-24T05:49:00",
-      "arrivalTime": "2023-02-24T05:57:10",
-      "alarmDepartureTime": "2023-02-24T05:49:00",
-      "alarmArrivalTime": "2023-02-24T05:57:10",
-      "duration": 8,
-      "intercityDuration": 0,
-      "walkingDuration": 0,
-      "waitingDuration": 0,
-      "distance": 5000,
-      "shutdown": True,
-      "fare": 1250,
-      "fares": [
-        {
-          "routes": [
-            [
-              {
-                "id": 7,
-                "name": "7»£º±",
-                "longName": "ºˆµµ±« 7»£º±(¿Âæœ-ºÆ≥≤)",
-                "type": {
-                  "id": 7,
-                  "name": "7»£º±",
-                  "shortName": None,
-                  "longName": None,
-                  "iconName": None,
-                  "color": "",#697215"",
-                  "darkColor": None
-                },
-                "realtime": False,
-                "useInterval": False,
-                "operationType": "¿œπ›",
-                "operation": {
-                  "type": "NORMAL",
-                  "name": "¿œπ›",
-                  "shortName": "¿œ"
-                },
-                "color": None,
-                "platform": None,
-                "headsign": None,
-                "busInterval": None,
-                "extra": None,
-                "exType": None,
-                "flag": None,
-                "canReserve": False
-              }
-            ]
-          ],
-          "fare": 1250,
-          "tripIdx": 3521
-        }
-      ],
-      "legs": [
-        {
-          "steps": [
-            {
-              "type": "SUBWAY",
-              "instruction": "¡ˆ«œ√∂ Ω¬¬˜",
-              "info": {
-                "walk": None,
-                "etc": "¡ˆ«œ√∂ Ω¬¬˜",
-                "subway": None
-              },
-              "departureTime": "2023-02-24T05:49:00",
-              "arrivalTime": "2023-02-24T05:57:10",
-              "alarmTime": {
-                "alarmDepartureTime": "2023-02-24T05:49:00",
-                "alarmArrivalTime": "2023-02-24T05:57:10"
-              },
-              "distance": 5000,
-              "duration": 8,
-              "tripIdx": 3521,
-              "headsign": "¿Âæœ",
-              "realtimeAvailable": "Y",
-              "wayType": "UP",
-              "routes": [
-                {
-                  "id": 7,
-                  "name": "7»£º±",
-                  "longName": "ºˆµµ±« 7»£º±(¿Âæœ-ºÆ≥≤)",
-                  "type": {
-                    "id": 7,
-                    "name": "7»£º±",
-                    "shortName": "7»£º±",
-                    "longName": None,
-                    "iconName": "7",
-                    "color": "",#697215"",
-                    "darkColor": None
-                  },
-                  "realtime": False,
-                  "useInterval": False,
-                  "operationType": "¿œπ›",
-                  "operation": {
-                    "type": "NORMAL",
-                    "name": "¿œπ›",
-                    "shortName": "¿œ"
-                  },
-                  "color": None,
-                  "platform": {
-                    "status": "EXIST",
-                    "type": {
-                      "code": "EXIT",
-                      "desc": "∫¸∏•«œ¬˜"
-                    },
-                    "door": "2-4",
-                    "doors": [
-                      "2-4",
-                      "6-2",
-                      "6-3"
-                    ]
-                  },
-                  "headsign": "¿Âæœ",
-                  "busInterval": None,
-                  "extra": None,
-                  "exType": None,
-                  "flag": None,
-                  "canReserve": False
-                }
-              ],
-              "stations": [
-                {
-                  "id": 736,
-                  "placeId": "13479774",
-                  "name": "¿Ãºˆ",
-                  "longName": None,
-                  "displayName": "¿Ãºˆø™",
-                  "displayCode": "736",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 3,
-                      "name": "»ØΩ¬ø¨∞·"
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 1,
-                      "name": "æ»¬ "
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥",
-                      "π∞«∞∫∏∞¸"
-                    ],
-                    "disabledFacilities": [
-                      "ºˆ¿ØΩ«",
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ",
-                      "»Ÿ√ºæÓ ∏Æ«¡∆Æ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                },
-                {
-                  "id": 735,
-                  "placeId": "13479552",
-                  "name": "≥ªπÊ",
-                  "longName": None,
-                  "displayName": "≥ªπÊø™",
-                  "displayCode": "735",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 2,
-                      "name": "ø¨∞·µ "
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 2,
-                      "name": "πŸ±˘"
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥",
-                      "π∞«∞∫∏∞¸"
-                    ],
-                    "disabledFacilities": [
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                },
-                {
-                  "id": 734,
-                  "placeId": "20536607",
-                  "name": "∞Ìº”≈ÕπÃ≥Œ",
-                  "longName": None,
-                  "displayName": "∞Ìº”≈ÕπÃ≥Œø™",
-                  "displayCode": "734",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 3,
-                      "name": "»ØΩ¬ø¨∞·"
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 2,
-                      "name": "πŸ±˘"
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥",
-                      "π∞«∞∫∏∞¸"
-                    ],
-                    "disabledFacilities": [
-                      "ºˆ¿ØΩ«",
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ",
-                      "»Ÿ√ºæÓ ∏Æ«¡∆Æ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                },
-                {
-                  "id": 733,
-                  "placeId": "13479551",
-                  "name": "π›∆˜",
-                  "longName": None,
-                  "displayName": "π›∆˜ø™",
-                  "displayCode": "733",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 2,
-                      "name": "ø¨∞·µ "
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 2,
-                      "name": "πŸ±˘"
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥"
-                    ],
-                    "disabledFacilities": [
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ",
-                      "»Ÿ√ºæÓ ∏Æ«¡∆Æ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                },
-                {
-                  "id": 732,
-                  "placeId": "13479550",
-                  "name": "≥Ì«ˆ",
-                  "longName": None,
-                  "displayName": "≥Ì«ˆø™",
-                  "displayCode": "732",
-                  "stop": True,
-                  "realtime": False,
-                  "aux": {
-                    "platform": {
-                      "id": 2,
-                      "name": "æÁ¬ "
-                    },
-                    "crossover": {
-                      "id": 2,
-                      "name": "ø¨∞·µ "
-                    },
-                    "door": {
-                      "id": 1,
-                      "name": "ø¿∏•¬ "
-                    },
-                    "restroom": {
-                      "id": 2,
-                      "name": "πŸ±˘"
-                    },
-                    "facilities": [
-                      "¿ØΩ«π∞ºæ≈Õ",
-                      "¿⁄¿¸∞≈∫∏∞¸º“",
-                      "¿Âæ÷¿Œ∆Ì¿«Ω√º≥",
-                      "π∞«∞∫∏∞¸"
-                    ],
-                    "disabledFacilities": [
-                      "ºˆ¿ØΩ«",
-                      "¿Âæ÷¿Œ»≠¿ÂΩ«",
-                      "ø§∏Æ∫£¿Ã≈Õ",
-                      "»Ÿ√ºæÓ ∏Æ«¡∆Æ"
-                    ],
-                    "lostCenter": {
-                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
-                      "tel": "02-6311-6767"
-                    }
-                  },
-                  "busStopAux": None
-                }
-              ],
-              "arrivals": [],
-              "points": [
-                {
-                  "x": 126.9820633,
-                  "y": 37.4853821
-                },
-                {
-                  "x": 126.9820633,
-                  "y": 37.4853821
-                },
-                {
-                  "x": 126.9824524,
-                  "y": 37.4854507
-                },
-                {
-                  "x": 126.983139,
-                  "y": 37.4855194
-                },
-                {
-                  "x": 126.9860382,
-                  "y": 37.4858513
-                },
-                {
-                  "x": 126.9880295,
-                  "y": 37.4860725
-                },
-                {
-                  "x": 126.9883728,
-                  "y": 37.4861221
-                },
-                {
-                  "x": 126.9889984,
-                  "y": 37.4862442
-                },
-                {
-                  "x": 126.9892883,
-                  "y": 37.4863205
-                },
-                {
-                  "x": 126.9908218,
-                  "y": 37.4867935
-                },
-                {
-                  "x": 126.9923325,
-                  "y": 37.4872551
-                },
-                {
-                  "x": 126.9929123,
-                  "y": 37.487442
-                },
-                {
-                  "x": 126.9934998,
-                  "y": 37.4876251
-                },
-                {
-                  "x": 126.9934998,
-                  "y": 37.4876251
-                },
-                {
-                  "x": 126.9939651,
-                  "y": 37.4877663
-                },
-                {
-                  "x": 126.9944229,
-                  "y": 37.4879036
-                },
-                {
-                  "x": 126.9959412,
-                  "y": 37.4883766
-                },
-                {
-                  "x": 126.9964752,
-                  "y": 37.4885445
-                },
-                {
-                  "x": 126.9972382,
-                  "y": 37.4888382
-                },
-                {
-                  "x": 126.9978409,
-                  "y": 37.4892197
-                },
-                {
-                  "x": 126.9983368,
-                  "y": 37.4896584
-                },
-                {
-                  "x": 126.9986954,
-                  "y": 37.4900742
-                },
-                {
-                  "x": 126.99897,
-                  "y": 37.4904671
-                },
-                {
-                  "x": 126.9993668,
-                  "y": 37.491127
-                },
-                {
-                  "x": 126.9998474,
-                  "y": 37.4919128
-                },
-                {
-                  "x": 127.0,
-                  "y": 37.4921761
-                },
-                {
-                  "x": 127.0000992,
-                  "y": 37.4923325
-                },
-                {
-                  "x": 127.0005875,
-                  "y": 37.4930458
-                },
-                {
-                  "x": 127.0009308,
-                  "y": 37.4935455
-                },
-                {
-                  "x": 127.0014725,
-                  "y": 37.4944153
-                },
-                {
-                  "x": 127.0017242,
-                  "y": 37.4950562
-                },
-                {
-                  "x": 127.0018997,
-                  "y": 37.4954834
-                },
-                {
-                  "x": 127.0019913,
-                  "y": 37.4960938
-                },
-                {
-                  "x": 127.0020828,
-                  "y": 37.4970169
-                },
-                {
-                  "x": 127.0021744,
-                  "y": 37.4980507
-                },
-                {
-                  "x": 127.0022812,
-                  "y": 37.4992409
-                },
-                {
-                  "x": 127.0024109,
-                  "y": 37.5006142
-                },
-                {
-                  "x": 127.0025177,
-                  "y": 37.5011902
-                },
-                {
-                  "x": 127.0027542,
-                  "y": 37.5017891
-                },
-                {
-                  "x": 127.0028915,
-                  "y": 37.5020065
-                },
-                {
-                  "x": 127.0030518,
-                  "y": 37.5022964
-                },
-                {
-                  "x": 127.0032654,
-                  "y": 37.5025139
-                },
-                {
-                  "x": 127.0035324,
-                  "y": 37.5027847
-                },
-                {
-                  "x": 127.0036926,
-                  "y": 37.5029221
-                },
-                {
-                  "x": 127.0040359,
-                  "y": 37.5031967
-                },
-                {
-                  "x": 127.0043869,
-                  "y": 37.5034065
-                },
-                {
-                  "x": 127.0045166,
-                  "y": 37.5034714
-                },
-                {
-                  "x": 127.0045166,
-                  "y": 37.5034714
-                },
-                {
-                  "x": 127.004631,
-                  "y": 37.5035248
-                },
-                {
-                  "x": 127.0047531,
-                  "y": 37.5035782
-                },
-                {
-                  "x": 127.0051498,
-                  "y": 37.5037346
-                },
-                {
-                  "x": 127.0055923,
-                  "y": 37.5038834
-                },
-                {
-                  "x": 127.0065536,
-                  "y": 37.504261
-                },
-                {
-                  "x": 127.0069733,
-                  "y": 37.5044441
-                },
-                {
-                  "x": 127.0071716,
-                  "y": 37.5045624
-                },
-                {
-                  "x": 127.0073624,
-                  "y": 37.504673
-                },
-                {
-                  "x": 127.0076141,
-                  "y": 37.504837
-                },
-                {
-                  "x": 127.0078888,
-                  "y": 37.505085
-                },
-                {
-                  "x": 127.0081329,
-                  "y": 37.5053482
-                },
-                {
-                  "x": 127.0086594,
-                  "y": 37.5061073
-                },
-                {
-                  "x": 127.0091095,
-                  "y": 37.5067711
-                },
-                {
-                  "x": 127.0093384,
-                  "y": 37.5070419
-                },
-                {
-                  "x": 127.0095673,
-                  "y": 37.5072708
-                },
-                {
-                  "x": 127.0098419,
-                  "y": 37.5074806
-                },
-                {
-                  "x": 127.0101166,
-                  "y": 37.5076714
-                },
-                {
-                  "x": 127.0104218,
-                  "y": 37.5078278
-                },
-                {
-                  "x": 127.0107803,
-                  "y": 37.5079384
-                },
-                {
-                  "x": 127.0110779,
-                  "y": 37.5080223
-                },
-                {
-                  "x": 127.0117416,
-                  "y": 37.5082245
-                },
-                {
-                  "x": 127.0117416,
-                  "y": 37.5082245
-                },
-                {
-                  "x": 127.0123138,
-                  "y": 37.5083923
-                },
-                {
-                  "x": 127.0129013,
-                  "y": 37.5085602
-                },
-                {
-                  "x": 127.014183,
-                  "y": 37.5089378
-                },
-                {
-                  "x": 127.0152664,
-                  "y": 37.5092621
-                },
-                {
-                  "x": 127.0165405,
-                  "y": 37.5096512
-                },
-                {
-                  "x": 127.0189743,
-                  "y": 37.5104027
-                },
-                {
-                  "x": 127.0202789,
-                  "y": 37.5108109
-                },
-                {
-                  "x": 127.020813,
-                  "y": 37.5109673
-                },
-                {
-                  "x": 127.0213547,
-                  "y": 37.5111351
-                }
-              ],
-              "direction": 1,
-              "walkpath": None,
-              "shutdown": False,
-              "lastTrip": False,
-              "firstTrip": True,
-              "departureCity": None,
-              "stationIdAsOptional": None
-            }
-          ]
-        }
-      ],
-      "transferCount": 0,
-      "directionsType": "CITY",
-      "pathLabels": [
-        {
-          "labelCode": "BEST",
-          "labelText": "√÷¿˚"
-        }
-      ],
-      "vehicleTypes": [
-        "SUBWAY"
-      ]
-    }
-  ],
-  "staticPaths": []
+	"start": [
+		{
+			"name": "Ï∂úÎ∞úÏó≠A",
+			"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711", 
+			"lat": 1.23123, 
+			"lng": 40.1231 
+		},
+		{
+			"name": "Ï∂úÎ∞úÏó≠B",
+			"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+			"lat": 1.23123,
+			"lng": 40.1231
+		}
+	],
+	"midPoints": [
+		{
+			"name": "ÎèÑÏ∞©Ïó≠A", 
+			"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+			"lat": 1.23123,
+			"lng": 40.1231,
+			"line": 3,
+			"id": "Í≥†Ïú†Ìïú Í∞í(Î≥¥ÎÇº Îïå Í∞ôÏùÄ Í∞í)",
+			"path": [
+				{
+					"startStation": "Ï∂úÎ∞úÏó≠A",
+					"time": 80,
+					"stations" : [
+						{
+							"name": "Ï∂úÎ∞úÏó≠A",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠1",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						},
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠2",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						},
+						{
+							"name": "ÎèÑÏ∞©Ïó≠A",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}
+					]
+				}, 
+				{
+					"startStation": "Ï∂úÎ∞úÏó≠B",
+					"time": 80
+					"stations" : [
+						{
+							"name": "Ï∂úÎ∞úÏó≠B"
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠1",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						},
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠2"
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, ...
+						{
+							"name": "ÎèÑÏ∞©Ïó≠A"
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ÎèÑÏ∞©Ïó≠B", 
+			"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+			"lat": 1.23123,
+			"lng": 40.1231,
+			"line": 3,
+			"id": 2,
+			"path": [
+				{
+					"startStation": "Ï∂úÎ∞úÏó≠A",
+					"time": 80,
+					"stations" : [
+						{
+							"name": "Ï∂úÎ∞úÏó≠A",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠1",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						},
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠2",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "ÎèÑÏ∞©Ïó≠B",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}
+					]
+				}, 
+				{
+					"startStation": "Ï∂úÎ∞úÏó≠B",
+					"time": 80,
+					"stations" : [
+						{
+							"name": "Ï∂úÎ∞úÏó≠B",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠1",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						},
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠2",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "ÎèÑÏ∞©Ïó≠B",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ÎèÑÏ∞©Ïó≠C", 
+			"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+			"lat": 1.23123,
+			"lng": 40.1231,
+			"line": 3,
+			"id": 3,
+			"path": [
+				{
+					"startStation": "Ï∂úÎ∞úÏó≠A",
+					"time": 80,
+					"stations" : [
+						{
+							"name": "Ï∂úÎ∞úÏó≠A",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠1",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						},
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠2",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "ÎèÑÏ∞©Ïó≠C",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}
+					]
+				}, 
+				{
+					"startStation": "Ï∂úÎ∞úÏó≠B",
+					"time": 80,
+					"stations" : [
+						{
+							"name": "Ï∂úÎ∞úÏó≠B",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠1",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						},
+						{
+							"name": "Ï§ëÍ∞ÑÏó≠2",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}, 
+						{
+							"name": "ÎèÑÏ∞©Ïó≠C",
+							"address": "Í∞ïÎÇ®ÎåÄÎ°ú Î¨¥Ïä®Î°ú Î¨¥Ïä®Í∏∏ 711",
+							"lat": 1.23123,
+							"lng": 40.1231
+						}
+					]
+				}
+			]
+		}
+	]
 }
